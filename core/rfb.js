@@ -388,9 +388,9 @@ export default class RFB extends EventTargetMixin {
 
         this._qualityLevel = qualityLevel;
 
-        if (this._rfbConnectionState === 'connected') {
-            this._sendEncodings();
-        }
+//        if (this._rfbConnectionState === 'connected') {
+//            this._sendEncodings();
+//        }
     }
 
     get compressionLevel() {
@@ -408,9 +408,9 @@ export default class RFB extends EventTargetMixin {
 
         this._compressionLevel = compressionLevel;
 
-        if (this._rfbConnectionState === 'connected') {
-            this._sendEncodings();
-        }
+//        if (this._rfbConnectionState === 'connected') {
+//            this._sendEncodings();
+//        }
     }
 
     // ===== PUBLIC METHODS =====
@@ -2107,7 +2107,7 @@ export default class RFB extends EventTargetMixin {
         }
 
         RFB.messages.pixelFormat(this._sock, this._fbDepth, true);
-        this._sendEncodings();
+//        this._sendEncodings();
         RFB.messages.fbUpdateRequest(this._sock, false, 0, 0, this._fbWidth, this._fbHeight);
 
         this._updateConnectionState('connected');
